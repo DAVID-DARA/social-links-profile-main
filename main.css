@@ -1,0 +1,143 @@
+:root {
+    --primary-body-light: hsl(0, 0%, 20%);
+    --primary-body-medium: hsl(0, 0%, 12%);
+    --primary-body-heavy: hsl(0, 0%, 8%);
+    --primary-color-text: hsl(0, 0%, 100%);
+    --secondary-color-text: hsl(75, 94%, 57%);
+    --font-size-large: 1.5rem;
+    --padding: 10px;
+    --text: 14px;
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url(./fonts/static/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url(./fonts/static/Inter-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url(./fonts/static/Inter-Bold.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background-color: var(--primary-body-heavy);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: var(--primary-body-medium);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 25px 0;
+}
+
+.text {
+    font-size: var(--text);
+    color: var(--primary-color-text);
+    font-family: 'Inter-Regular';
+}
+
+#name {
+    font-family: 'Inter-SemiBold';
+    font-size: 25pt;
+    margin: 10px 0;
+}
+
+#location {
+    color: var(--secondary-color-text);
+    font-family: 'Inter-SemiBold';
+    margin: 10px 0 30px 0;
+}
+
+@media (max-width: 1023px) {
+    .box {
+        width: 85%;
+        height: 70%;
+    }
+
+    .socials {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .social {
+        padding: 20px;
+        justify-items: center;
+        font-family: 'Inter-SemiBold';
+        background-color: var(--primary-body-light);
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .box {
+        width: 25%;
+        height: 70%;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin: 15px 0;
+    }
+    
+    #name {
+        font-family: 'Inter-SemiBold';
+        font-size: 15pt;
+        margin: 10px 0;
+    }
+
+    #location {
+        color: var(--secondary-color-text);
+        font-family: 'Inter-SemiBold';
+        margin: 5px 0 20px 0;
+        font-size: 8pt;
+    }
+
+    #info {
+        font-size: 8pt;
+    }
+    .socials {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .social {
+        padding: 10px;
+        justify-items: center;
+        background-color: var(--primary-body-light);
+        border-radius: 5px;
+    }
+
+    .social p {
+        font-size: 8pt;
+        font-family: 'Inter-SemiBold';
+    }
+}
