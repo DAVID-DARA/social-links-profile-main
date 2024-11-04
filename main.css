@@ -23,121 +23,94 @@
     font-family: 'Inter-Bold';
     src: url(./fonts/static/Inter-Bold.ttf);
 }
+
+/* Basic Reset */
 * {
-    padding: 0;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-main {
-    background-color: var(--primary-body-heavy);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Body Styling */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #121212;
+  font-family: Arial, sans-serif;
 }
 
-.box {
-    background-color: var(--primary-body-medium);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Card Styling */
+.card {
+  background-color: #1e1e1e;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.location {
+  color: #b3ff00;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* Social Links Styling */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.button.github {
+  background-color: #b3ff00; /* Active state color */
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .social-links {
     flex-direction: column;
-}
+    flex-wrap: wrap;
+  }
 
-img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: 25px 0;
-}
-
-.text {
-    font-size: var(--text);
-    color: var(--primary-color-text);
-    font-family: 'Inter-Regular';
-}
-
-#name {
-    font-family: 'Inter-SemiBold';
-    font-size: 25pt;
-    margin: 10px 0;
-}
-
-#location {
-    color: var(--secondary-color-text);
-    font-family: 'Inter-SemiBold';
-    margin: 10px 0 30px 0;
-}
-
-@media (max-width: 1023px) {
-    .box {
-        width: 85%;
-        height: 70%;
-    }
-
-    .socials {
-        width: 80%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .social {
-        padding: 20px;
-        justify-items: center;
-        font-family: 'Inter-SemiBold';
-        background-color: var(--primary-body-light);
-        border-radius: 10px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .box {
-        width: 25%;
-        height: 70%;
-    }
-
-    img {
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        margin: 15px 0;
-    }
-    
-    #name {
-        font-family: 'Inter-SemiBold';
-        font-size: 15pt;
-        margin: 10px 0;
-    }
-
-    #location {
-        color: var(--secondary-color-text);
-        font-family: 'Inter-SemiBold';
-        margin: 5px 0 20px 0;
-        font-size: 8pt;
-    }
-
-    #info {
-        font-size: 8pt;
-    }
-    .socials {
-        width: 80%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .social {
-        padding: 10px;
-        justify-items: center;
-        background-color: var(--primary-body-light);
-        border-radius: 5px;
-    }
-
-    .social p {
-        font-size: 8pt;
-        font-family: 'Inter-SemiBold';
-    }
+  .button {
+    flex: 1 1 45%;
+  }
 }
